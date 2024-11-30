@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: springgreen;">
+    <a href="index.html">inicio</a>
+    <h1>calculadora</h1>
+<body>
+
+</body>
+numA <input type="number" name="" id="numA"><br>
+numB <input type="number" name="" id="numB"><br>
+<input type="button" onclick="suma();" value="Calcula suma"><br>
+<input type="button" onclick="resta();" value="Calcula resta"><br>
+<input type="button" onclick="multiplicacion();" value="Calcula multiplicacion"><br>
+<input type="button" onclick="divicion();" value="Calcula divicion"><br>
+Resultado <input type="number" name="" id="res"><br>
+
+</body>
+<script>
+    function suma() {
+        var numa = document.getElementById('numA').value;
+        var numb = document.getElementById('numB').value;
+        var resultado = parseInt(numa) + parseInt(numb);
+        document.getElementById("res").value = resultado;
+
+    }
+
+    function resta() {
+        var numa = document.getElementById('numA').value;
+        var numb = document.getElementById('numB').value;
+        var resultado = parseInt(numa) - parseInt(numb);
+        document.getElementById("res").value = resultado;
+
+    }
+
+    function multiplicacion() {
+        var numa = document.getElementById('numA').value;
+        var numb = document.getElementById('numB').value;
+        var resultado = parseInt(numa) * parseInt(numb);
+        document.getElementById("res").value = resultado;
+
+    }
+
+    function divicion() {
+        var numa = document.getElementById('numA').value;
+        var numb = document.getElementById('numB').value;
+        var resultado = parseInt(numa) / parseInt(numb);
+        document.getElementById("res").value = resultado;
+
+    }
+
+
+</script>
+</html>

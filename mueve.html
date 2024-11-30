@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueve</title>
+    <style>
+        #cuadro {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+    <body style="background-color: gray;">
+        <a href="index.html">inicio</a>
+        <h1>Mucho mejor que GTA VI</h1>
+
+    <div id="cuadro"></div>
+    <br><br><br><br><br><br><br><br>
+    <input type="button" onclick="mueve(this)" value="izq">
+    <input type="button" onclick="mueve(this)" value="der"> 
+    <input type="button" onclick="mueve(this)" value="arriba"> 
+    <input type="button" onclick="mueve(this)" value="abajo"> 
+
+</body>
+<script>  onload = function () {
+            var cuadro = document.getElementById('cuadro');
+            cuadro.style.left = '46px';
+            cuadro.style.top = '120px';
+
+        }
+function mueve(obj) {
+    var cuadro = document.getElementById('cuadro');
+    var x = parseInt(cuadro.style.left);
+    var y = parseInt(cuadro.style.top);
+    
+    if (obj.value == 'izq') {
+        x -= 10;
+    }
+    if (obj.value == 'der') {
+        x += 10;
+    }
+    if (obj.value == 'arriba') {
+        y -= 10;
+    }
+    if (obj.value == 'abajo') {
+        y += 10;
+    }
+    cuadro.style.left = x + 'px';
+    cuadro.style.top = y + 'px';
+
+}
+
+</script>
+   
+</html>
